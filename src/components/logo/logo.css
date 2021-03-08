@@ -1,0 +1,14 @@
+.logo {
+  width: 18em;
+}
+
+.logo svg {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.logo span {
+  text-indent: -999em;
+  position: absolute;
+}

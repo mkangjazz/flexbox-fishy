@@ -1,0 +1,14 @@
+.gameboard {
+  height: 0;
+  padding: 0 0 100%;
+  position: relative;
+  width: 100%;
+}
+
+@media all and (min-width:800px) {
+  .gameboard {
+    margin-left: auto;
+    padding: 0 0 66.6%;
+    width: 66.6%;
+  }
+}

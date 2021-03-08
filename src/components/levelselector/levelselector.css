@@ -1,0 +1,23 @@
+.level-selector {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  background-image: url(../../img/dropdown-arrow.png);
+  background-position: right .5em center;
+  background-repeat: no-repeat;
+  background-size: 16px auto;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1.25rem;
+  letter-spacing: 1.5px;
+  padding: .5em .25em;
+  width: 10em;
+}
+
+.level-selector::-ms-expand {
+    display: none;
+}

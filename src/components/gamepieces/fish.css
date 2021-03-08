@@ -1,0 +1,41 @@
+.fish {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  text-indent: -999em;
+  transform: scale(.65);
+}
+
+.fish .body {
+  fill: gray;
+}
+
+.fish.blue .body {
+  fill: blue;
+}
+
+.fish.red .body {
+  fill: red;
+}
+
+.fish.green .body {
+  fill: green;
+}
+
+.fish.purple .body {
+  fill: purple;
+}
+
+.fish.yellow .body {
+  fill: yellow;
+}
+
+.fish.pink .body {
+  fill: pink;
+}
+
+.fish.orange .body {
+  fill: orange;
+}
+

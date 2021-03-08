@@ -1,0 +1,94 @@
+.codeinput .code-interface {
+  background-color: #fff;
+  border-radius: 8px;
+  font-family: 'Source Code Pro', monospace;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+
+.codeinput .code-interface caption {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: .25em;
+  text-align: left;
+}
+
+.codeinput .code-interface th,
+.codeinput .code-interface td {
+  padding: .25em;
+}
+
+.codeinput .code-interface .indent-left {
+  padding-left: 2em;
+}
+
+.codeinput .code-interface th {
+  background-color: #ccc;
+  margin: 0;
+  width: 2em;
+  text-align: right;
+}
+
+.codeinput input,
+.codeinput textarea {
+  border: none;
+  font-family: 'Source Code Pro', monospace;
+  letter-spacing: 1.5px;
+}
+
+.instructions {
+  padding: 1em;
+}
+
+code,
+.code {
+  font-family: 'Source Code Pro', monospace;
+  letter-spacing: 1.5px;
+}
+
+.instructions button {
+  background-color: #fff;
+  border-color: #0067AB;
+  border-radius: 4px;
+  color: #0067AB;
+  font-size: .75em;
+  font-weight: bold;
+  margin: 0 .25em;
+  padding: .5em .5em;
+  vertical-align: middle;
+}
+/*
+
+.hints {
+  border-radius: 4px;
+  background-color: #eee;
+  margin: 0;
+  padding: .75em;
+}
+
+.hints th,
+.hints td {
+  vertical-align: middle;
+  padding: .25em .5em;
+}
+
+.hints th {
+  border-right: 1px solid #ccc;
+  white-space: nowrap;
+}
+*/
+
+.codeinput input[type='text'] {
+  border: 1px solid #333;
+}
+
+
+@media all and (min-width:800px) {
+  .codeinput {
+    margin-right: auto;
+    width: 31.3%;
+  }
+}

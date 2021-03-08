@@ -1,0 +1,24 @@
+nav {
+  align-content: center;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+nav ul {
+  align-content: center;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+nav li {
+  align-items: center;
+  display: flex;
+  margin: 0 1em;
+}
+
+nav li a {
+/*  color:;*/
+  text-decoration: none;
+}
