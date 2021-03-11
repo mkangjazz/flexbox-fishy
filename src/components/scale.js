@@ -1,5 +1,3 @@
-import './scale.css';
-
 import React from 'react';
 
 export default function Scale(props) {

@@ -1,8 +1,4 @@
-import './gamepiece.css';
-
 import React from 'react';
-//import getRandomInteger from '../../utility/getRandomInteger';
-
 import Fish from './fish';
 import Scale from './scale';
 

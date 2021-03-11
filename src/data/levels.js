@@ -1,24 +1,16 @@
-const levels = {
-  _1: {
-    count: 3,
-    css: [
+const levels = [
+  {
+    cssObjects: [
       {
-        selector: '.fish-pieces',
+        selector: '.fishies',
         styles: {
-            display: 'flex',
-            justify_content: 'flex-end',
+          display: 'flex',
+          justify_content: 'flex-end',
         },
-        input: true,
-      },
-      {
-        selector: '.fish-piece',
-        styles: {
-            border: '1px solid pink',
-        },
-        input: true,
-      },
+      }
     ],
+    gamePieces: 1,
   },
-};
+];
 
 export default levels;

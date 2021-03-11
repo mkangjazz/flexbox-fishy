@@ -25,8 +25,7 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, main, footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
@@ -56,46 +55,3 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
-.App {
-  font-family: 'Quicksand', sans-serif;
-  line-height: 1.4;
-  font-size: 1.25rem;
-}
-
-a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-html {
-  animation: gradient 15s ease infinite;
-  background: linear-gradient(-45deg, #91E6FF, #23A6D5, #0096F4, #41FFD2);
-  background-size: 400% 400%;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.container {
-  max-width: 1800px;
-  margin: 0 auto;
-  width: 95%;
-}
-
-@media all and (min-width:1024px) {
-  .container {
-    display: flex;
-    max-width: 1800px;
-  }
-}
-

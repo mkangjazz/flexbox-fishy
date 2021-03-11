@@ -1,0 +1,46 @@
+@import './reset';
+
+@import './fish';
+@import './gameboard';
+@import './logo';
+@import './scale';
+
+.App {
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.4;
+  font-size: 1.25rem;
+}
+
+.container {
+  align-items: stretch;
+  display: flex;
+  min-height: calc(100vh);
+  margin: 0 auto;
+}
+
+.sidebar {
+  background-color: #fff;
+  // height: 100%;
+  padding: 1em;
+  width: 20em;
+}
+
+.mainbar {
+  // height: 100%;
+  width: calc(100% - 20em);
+}
+
+// td:nth-child(2):after {
+//   content:":";
+// }
+
+// td:nth-child(3):after {
+//   content:";";
+// }
+
+// @media all and (min-width:1024px) {
+//   .container {
+//     display: flex;
+//     max-width: 1800px;
+//   }
+// }
