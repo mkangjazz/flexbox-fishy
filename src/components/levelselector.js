@@ -1,8 +1,14 @@
 import React from 'react';
 
+import {useLocation, useParams, useHistory} from "react-router-dom";
+
 export default function LevelSelector(props) {
+  const history = useHistory();
+
   function handleChange(e) {
-    props.setLevelCount(e.target.value);
+    history.push(`/?level=${String(Number(e.target.value) + 1)}`);
+
+    props.setCurrentLevel(Number(e.target.value));
   }
 
   const levelOptions = (() => {
@@ -28,6 +34,7 @@ export default function LevelSelector(props) {
       <select
         className='level-selector'
         onChange={handleChange}
+        defaultValue={props.currentLevel}
       >
         {levelOptions}
       </select>
