@@ -26,32 +26,41 @@ export default function Main() {
   const [inputData, setInputData] = useState([]);
 
   function getLevelFromQueryString() {
-    let level = 0;
-
     if (query.get("level")) {
-      level = (Number(query.get("level")) - 1);
+      const queryLevel = query.get("level")
+        .replace(/[^0-9]/gi,'');
+
+      const regex = new RegExp('[^0-9]', 'ig');
+
+      if (queryLevel < 1) {
+        history.push(`/?level=1`);
+
+        return 0;
+      }
+
+      if (queryLevel > levels.length) {
+        history.push(`/?level=${levels.length}`);
+
+        return levels.length - 1;
+      }
+
+      if (queryLevel) {
+        return (Number(queryLevel) - 1);
+      }
+    } else {
+      history.push(`/?level=1`);
+
+      return 0;      
     }
-
-    return level;
-  }
-
-  if (
-    !query.get("level")
-    // query.get("level") compare levels against each other?
-  ) {
-    history.push(`/?level=1`);
   }
 
   useEffect(() => {
     const level = getLevelFromQueryString();
 
-    setCurrentLevel(
-      level
-    );
-
+    setCurrentLevel(level);
     setCurrentLevelData(levels[level]);
   }, [
-    currentLevel
+    currentLevel,
   ]);
 
   const handleFormSubmit = (e) => {

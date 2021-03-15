@@ -5,6 +5,22 @@ import {useLocation, useParams, useHistory} from "react-router-dom";
 export default function LevelSelector(props) {
   const history = useHistory();
 
+  function handlePrevious() {
+    if (props.currentLevel - 1>= 0) {
+      history.push(`/?level=${String(props.currentLevel)}`);
+
+      props.setCurrentLevel(props.currentLevel - 1);
+    }
+  }
+
+  function handleNext() {
+    if (props.currentLevel + 1 <= props.levelCount - 1) {
+      history.push(`/?level=${String(props.currentLevel + 2)}`);
+
+      props.setCurrentLevel(props.currentLevel + 1);
+    }
+  }
+
   function handleChange(e) {
     history.push(`/?level=${String(Number(e.target.value) + 1)}`);
 
@@ -30,14 +46,26 @@ export default function LevelSelector(props) {
 
   return (
     <div>
+      <button
+        onClick={handlePrevious}
+        type="button"
+      >
+        <span className='sr-only'>Previous</span>
+      </button>
       Level: 
       <select
         className='level-selector'
         onChange={handleChange}
-        defaultValue={props.currentLevel}
+        value={props.currentLevel}
       >
         {levelOptions}
       </select>
+      <button
+        onClick={handleNext}
+        type="button"
+      >
+        <span className='sr-only'>Next</span>
+      </button>
     </div>
   );
 }
