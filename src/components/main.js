@@ -9,6 +9,7 @@ import React, { useEffect, useState } from 'react';
 
 import Logo from './logo';
 import CSSObjects from './cssobjects';
+import Description from './description';
 import LevelSelector from './levelselector';
 import Fish from './fish';
 import Scale from './scale';
@@ -104,38 +105,6 @@ export default function Main() {
     setInputData(styles);
   };
 
-  const renderFish = () => {
-    const arr = [];
-
-    for (let i = 0; i < currentLevelData.gamePieces; i += 1) {
-      arr.push(
-        <li key={i}>
-          <div className='gamepiece'>
-            <Fish />
-          </div>
-        </li>
-      );
-    }
-
-    return arr;
-  };
-
-  const renderScales = () => {
-    const arr = [];
-
-    for (let i = 0; i < currentLevelData.gamePieces; i += 1) {
-      arr.push(
-        <li key={i}>
-          <div className='gamepiece'>
-            <Scale />
-          </div>
-        </li>
-      );
-    }
- 
-    return arr;
-  };
-
   const styleString = () => {
     const scaleStylesObj = currentLevelData.cssObjects
       .filter(obj => obj.selector === '.fishies')[0];
@@ -180,10 +149,19 @@ export default function Main() {
       <div className='container'>
         <div className='sidebar'>
           <Logo />
+          <p className='copyright'>
+            <small>A <a href='https://flexboxfroggy.com/' target="_blank">Flexbox Froggy</a> clone</small>
+          </p>
+          <p>
+            Help Fishy and friends find their missing scales using CSS flexbox properties.
+          </p>
           <LevelSelector
             currentLevel={currentLevel}
             levelCount={levels.length}
             setCurrentLevel={setCurrentLevel}
+          />
+          <Description 
+            content={currentLevelData.description}
           />
           <form
             autoComplete="off"
@@ -201,21 +179,42 @@ export default function Main() {
             </table>
             <input 
               type='submit'
-              value='Submit'
+              value='Try It Out!'
             />
           </form>
+          <p className='copyright'>
+            <small>
+              &copy;{new Date().getFullYear()} Mike Kang.
+            </small>
+          </p>
         </div>
         <div className='mainbar'>
           <div className={`gameboard`}>
             <ul 
               className='fishies'
             >
-              {renderFish()}
+              {currentLevelData.gamePieces.map((obj, index) => {
+                return (
+                  <li key={index}>
+                    <div className='gamepiece'>
+                      <Fish className={obj.className} />
+                    </div>
+                  </li>
+                )
+              })}
             </ul>
             <ul 
               className='scales'
             >
-              {renderScales()}
+              {currentLevelData.gamePieces.map((obj, index) => {
+                return (
+                  <li key={index}>
+                    <div className='gamepiece'>
+                      <Scale className={obj.className} />
+                    </div>
+                  </li>
+                )
+              })}
             </ul>
           </div>
         </div>

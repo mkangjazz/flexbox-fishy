@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Scale(props) {
   return (
-    <div className="scale">
+    <div className={`scale ${props.className}`}>
       <div className="scale-quarter upper-left">
         <div className="circle">
         </div>

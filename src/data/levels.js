@@ -9,7 +9,14 @@ const levels = [
         },
       }
     ],
-    gamePieces: 1,
+    description: ` 
+      <p>Description ipsum...</p>
+    `,
+    gamePieces: [
+      {
+        className: 'blue',
+      },
+    ],
   },
   {
     cssObjects: [
@@ -21,7 +28,17 @@ const levels = [
         },
       }
     ],
-    gamePieces: 2,
+    description: ` 
+      <p>Description ipsum...</p>
+    `,
+    gamePieces: [
+      {
+        className: 'blue',
+      },
+      {
+        className: 'red',
+      },
+    ],
   },
   {
     cssObjects: [
@@ -33,7 +50,20 @@ const levels = [
         },
       }
     ],
-    gamePieces: 3,
+    description: ` 
+      <p>Description ipsum...</p>
+    `,
+    gamePieces: [
+      {
+        className: 'blue',
+      },
+      {
+        className: 'red',
+      },
+      {
+        className: 'pink',
+      },
+    ],
   },
 ];
 
