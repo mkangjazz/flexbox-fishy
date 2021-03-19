@@ -1,70 +1,11 @@
+import _1 from './_1';
+import _2 from './_2';
+import _3 from './_3';
+
 const levels = [
-  {
-    cssObjects: [
-      {
-        selector: '.fishies',
-        styles: {
-          display: 'flex',
-          justify_content: 'flex-end',
-        },
-      }
-    ],
-    description: ` 
-      <p>Description ipsum...</p>
-    `,
-    gamePieces: [
-      {
-        className: 'blue',
-      },
-    ],
-  },
-  {
-    cssObjects: [
-      {
-        selector: '.fishies',
-        styles: {
-          display: 'flex',
-          justify_content: 'flex-end',
-        },
-      }
-    ],
-    description: ` 
-      <p>Description ipsum...</p>
-    `,
-    gamePieces: [
-      {
-        className: 'blue',
-      },
-      {
-        className: 'red',
-      },
-    ],
-  },
-  {
-    cssObjects: [
-      {
-        selector: '.fishies',
-        styles: {
-          display: 'flex',
-          justify_content: 'flex-end',
-        },
-      }
-    ],
-    description: ` 
-      <p>Description ipsum...</p>
-    `,
-    gamePieces: [
-      {
-        className: 'blue',
-      },
-      {
-        className: 'red',
-      },
-      {
-        className: 'pink',
-      },
-    ],
-  },
+  _1,
+  _2,
+  _3
 ];
 
 export default levels;
