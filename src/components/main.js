@@ -82,9 +82,11 @@ export default function Main() {
 
     setInputData(input);
 
-    checkAnswerAgainstSolution(input, solutionString);
+    console.log(
+      checkAnswerAgainstSolution(input, solutionString)
+    );
 
-    // setIsSolved();
+    setIsSolved(checkAnswerAgainstSolution(input, solutionString));
   };
 
   return (
