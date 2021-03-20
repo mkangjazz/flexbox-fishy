@@ -1,4 +1,5 @@
 import checkAnswerAgainstSolution from '../utility/checkAnswerAgainstSolution';
+import focusFirstEnabledInput from '../utility/focusFirstEnabledInput';
 import makeStyleStringFromObj from '../utility/makeStyleStringFromObj';
 import makeStyleStringFromInputs from '../utility/makeStyleStringFromInputs';
 
@@ -6,7 +7,7 @@ import levels from '../data/levels';
 
 import {useLocation, useHistory} from "react-router-dom";
 
-import React, { useEffect, useState } from 'react';
+import React, {useRef, useEffect, useState} from 'react';
 
 import CSSObjects from './cssobjects';
 import Description from './description';
@@ -16,6 +17,7 @@ import Logo from './logo';
 import Scale from './scale';
 
 export default function Main() {
+  const formRef = useRef();
   const history = useHistory();
   const query = new URLSearchParams(useLocation().search);
 
@@ -51,7 +53,13 @@ export default function Main() {
   ]);
 
   useEffect(() => {
+    if (formRef.current) {
+      formRef.current.reset();
+    }
+
     setCurrentLevelData(levels[currentLevel]);
+    setInputData('');
+    setIsSolved(false);
   }, [
     currentLevel
   ]);
@@ -68,9 +76,24 @@ export default function Main() {
     }
 
     setsolutionString(styleString);
+
+    if (formRef.current) {
+      focusFirstEnabledInput(formRef.current);
+
+      const els = Array.prototype.slice.call(formRef.current.elements)
+        .filter(el => el.getAttribute('type') === 'text' ? el : null);
+
+      const input = makeStyleStringFromInputs(els);
+
+      setInputData(input);
+    }
   }, [
     currentLevelData,
   ]);
+
+  const handleNextLevel = (e) => {
+    history.push(`/?level=${String(Number(currentLevel) + 2)}`);
+  }
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -82,11 +105,24 @@ export default function Main() {
 
     setInputData(input);
 
-    console.log(
-      checkAnswerAgainstSolution(input, solutionString)
-    );
+    const isCorrect = checkAnswerAgainstSolution(input, solutionString);
 
-    setIsSolved(checkAnswerAgainstSolution(input, solutionString));
+    if (!isCorrect) {
+      if (formRef.current) {
+        formRef.current.classList.add('shake-me');
+
+        setTimeout(
+          () => {
+            formRef.current.classList.remove('shake-me');
+          }, 
+          750
+        );
+      }
+
+      focusFirstEnabledInput(formRef.current);
+    }
+
+    setIsSolved(isCorrect);
   };
 
   return (
@@ -117,9 +153,8 @@ export default function Main() {
               />
               <form
                 autoComplete="off"
-                className='codeinput'
-                id='codeinput'
                 onSubmit={handleFormSubmit}
+                ref={formRef}
               >
                 <table className='code-interface'>
                   <tbody>
@@ -129,14 +164,22 @@ export default function Main() {
                     />
                   </tbody>
                 </table>
-                <input 
-                  type='submit'
-                  value='Try It Out!'
-                />
+                <div className='actions'>
+                  <input
+                    type='submit'
+                    value='Run Code'
+                  />
+                  <input
+                    onClick={handleNextLevel}
+                    disabled = {isSolved ? false : true}
+                    type='button'
+                    value='Go to Next Level'
+                  />
+                </div>
               </form>
               <p className='copyright'>
                 <small>
-                  &copy;{new Date().getFullYear()} Mike Kang.
+                  &copy;{new Date().getFullYear()} Mike Kang
                 </small>
               </p>
             </div>

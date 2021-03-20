@@ -10,6 +10,9 @@ export default {
   ],
   description: ` 
     <p>Description ipsum...</p>
+    <ul>
+      <li>Test descr....</li>
+    </ul>
   `,
   gamePieces: [
     {
