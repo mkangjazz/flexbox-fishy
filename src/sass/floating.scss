@@ -1,0 +1,16 @@
+.floating {
+  animation-direction: alternate;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: floating;
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translate(0, 0) scale(.65);
+  }
+  50% {
+    transform: translate(0, .5rem) scale(.65);
+  }
+}

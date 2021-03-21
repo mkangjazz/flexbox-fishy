@@ -1,0 +1,66 @@
+html {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 62.7%;
+}
+
+body {
+  line-height: 1.4;
+}
+
+.lead {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: #fff;
+  // padding: 1.6rem 0;
+  margin-bottom: 1rem;
+
+  p {
+    font-size: 1.6rem;
+  }
+  
+  ul {
+    list-style: disc;
+    margin-left: 2.6rem;
+  }
+  
+  li {
+    font-size: 1.6rem;
+  }  
+}
+
+.copyright {
+  color: #fff;
+  font-size: 1.2rem;
+  font-style: italic;
+
+  a {
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+select,
+button,
+.button,
+td, 
+input {
+  font-family: 'Source Code Pro', sans-serif;
+}
+
+select {
+  font-size: 1.2rem;
+}
+
+td, 
+input {
+  font-size: 1.6rem;
+}

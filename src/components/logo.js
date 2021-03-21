@@ -19,6 +19,9 @@ export default function Logo() {
           </g>
         </svg>
       </a>
+      <span className='sr-only'>
+        Flexbox Fishy
+      </span>
     </h1>
   );
 }

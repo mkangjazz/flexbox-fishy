@@ -13,17 +13,19 @@ export default function CSSObjects(props) {
     }
   })();
 
-  // let's just build a string
   const styleInputs = (obj) => {
     const jsx = [];
 
     for (var key in obj.styles) {
       jsx.push(
-        <tr key={`style-${key}`}>
-          <td>
+        <tr
+          className='selector-styles'
+          key={`style-${key}`}
+        >
+          <td className='code-line-number'>
             {lineCount.run()}
           </td>
-          <td>
+          <td className='code-indent'>
             {key === 'display'
               ? <input
                   data-selector={obj.selector}
@@ -36,6 +38,9 @@ export default function CSSObjects(props) {
                   type='text'
                 />
             }
+          </td>
+          <td className='code-separator'>
+            :
           </td>
           <td>
             {key === 'display'
@@ -51,6 +56,9 @@ export default function CSSObjects(props) {
                 />
             }
           </td>
+          <td className='code-separator'>
+            ;
+          </td>
         </tr>
       );
     }
@@ -62,15 +70,17 @@ export default function CSSObjects(props) {
     props.currentLevelData.cssObjects.map(obj=> {
       return (
         <React.Fragment key={obj.selector}>
-          <tr key={obj.selector}>
-            <td>{lineCount.run()}</td>
-            <td>{obj.selector}</td>
-            <td>{`{`}</td>
+          <tr
+            className='selector-open'
+            key={obj.selector}
+          >
+            <td className='code-line-number'>{lineCount.run()}</td>
+            <td colSpan='4'>{obj.selector} {`{`}</td>
           </tr>
           {styleInputs(obj)}
-          <tr>
-            <td>{lineCount.run()}</td>
-            <td rowSpan='3'>{`}`}</td>
+          <tr className='selector-close'>
+            <td className='code-line-number'>{lineCount.run()}</td>
+            <td colSpan='4'>{`}`}</td>
           </tr>
         </React.Fragment>
       );

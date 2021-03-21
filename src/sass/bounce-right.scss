@@ -1,0 +1,16 @@
+.bounce-right {
+  animation-direction: alternate;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: bounce-right;
+}
+
+@keyframes bounce-right {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(1rem, 0);
+  }
+}

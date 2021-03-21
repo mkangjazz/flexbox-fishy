@@ -40,6 +40,7 @@ export default function Main() {
   const [inputData, setInputData] = useState([]);
   const [solutionString, setsolutionString] = useState();
   const [isSolved, setIsSolved] = useState(false);
+  const [showDescription, setShowDescription] = useState(false);
 
   useEffect(() => {
     if (query.get("level")) {
@@ -91,6 +92,10 @@ export default function Main() {
     currentLevelData,
   ]);
 
+  const handleButtonClick = (e) => {
+    setShowDescription(curr => !curr);
+  };
+
   const handleNextLevel = (e) => {
     history.push(`/?level=${String(Number(currentLevel) + 2)}`);
   }
@@ -136,52 +141,77 @@ export default function Main() {
           </style>
           <div className='container'>
             <div className='sidebar'>
-              <Logo />
-              <p className='copyright'>
-                <small>A <a href='https://flexboxfroggy.com/' target="_blank">Flexbox Froggy</a> clone</small>
-              </p>
-              <p>
-                Help Fishy and friends find their missing scales using CSS flexbox properties.
-              </p>
-              <LevelSelector
-                currentLevel={currentLevel}
-                levelCount={levels.length}
-                setCurrentLevel={setCurrentLevel}
-              />
-              <Description 
-                content={currentLevelData.description}
-              />
-              <form
-                autoComplete="off"
-                onSubmit={handleFormSubmit}
-                ref={formRef}
-              >
-                <table className='code-interface'>
-                  <tbody>
-                    <CSSObjects 
+              <div className='scrollable'>
+                <section>
+                  <Logo />
+                  <p className='lead'>
+                    Help Fishy and friends find their missing scales using CSS flexbox properties
+                  </p>
+                  <div className='level'>
+                    <LevelSelector
                       currentLevel={currentLevel}
-                      currentLevelData={currentLevelData} 
+                      levelCount={levels.length}
+                      setCurrentLevel={setCurrentLevel}
+                      setShowDescription={setShowDescription}
                     />
-                  </tbody>
-                </table>
-                <div className='actions'>
-                  <input
-                    type='submit'
-                    value='Run Code'
-                  />
-                  <input
-                    onClick={handleNextLevel}
-                    disabled = {isSolved ? false : true}
-                    type='button'
-                    value='Go to Next Level'
-                  />
-                </div>
-              </form>
-              <p className='copyright'>
-                <small>
-                  &copy;{new Date().getFullYear()} Mike Kang
-                </small>
-              </p>
+                    <button
+                      className='button-show-hint'
+                      onClick={handleButtonClick}
+                      type='button'
+                    >
+                      {showDescription ? 'Hide Hints' : 'Show Hints' }
+                    </button>
+                  </div>
+                  {showDescription
+                    ? <Description
+                        content={currentLevelData.description}
+                      />
+                    : null
+                  }
+                  <form
+                    autoComplete="off"
+                    onSubmit={handleFormSubmit}
+                    ref={formRef}
+                  >
+                    <table className='code-interface'>
+                      <tbody>
+                        <CSSObjects 
+                          currentLevel={currentLevel}
+                          currentLevelData={currentLevelData} 
+                        />
+                      </tbody>
+                    </table>
+                    <div className='actions'>
+                      <input
+                        className='button button-run-code'
+                        type='submit'
+                        value='Run Code'
+                      />
+                      {currentLevel < levels.length - 1
+                        ? <button
+                            className='button button-next-level'
+                            onClick={handleNextLevel}
+                            disabled = {isSolved ? false : true}
+                            type='button'
+                          >
+                            <span>
+                              {'Next Level'}
+                            </span>
+                          </button>
+                        : null
+                      }
+                    </div>
+                  </form>
+                  <p className='copyright text-center'>
+                    Flexbox Fishy is a clone of <a href='https://flexboxfroggy.com/' target="_blank">Flexbox Froggy</a>
+                  </p>
+                  <p className='copyright'>
+                    <small>
+                      &copy;{new Date().getFullYear()} Mike Kang, created for educational purposes only.
+                    </small>
+                  </p>
+                </section>
+              </div>
             </div>
             <div className='mainbar'>
               <div className={`gameboard`}>

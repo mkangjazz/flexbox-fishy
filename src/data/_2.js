@@ -6,7 +6,7 @@ export default {
         display: 'flex',
         justifyContent: 'center',
       },
-    }
+    },
   ],
   description: ` 
     <p>Description ipsum...</p>

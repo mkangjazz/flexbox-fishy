@@ -1,0 +1,57 @@
+form {
+  margin-bottom: 10rem;
+  padding: 1rem 0;
+
+  [type="text"] {
+    border: 1px solid #333;
+    border-radius: .25rem;
+    display: block;
+    outline: none;
+    transition: all ease .25s;
+    width: 100%;
+
+    &:focus {
+      border-color: #000;
+    }
+  }
+
+  [disabled] {
+    opacity: .45;
+  }
+
+  .actions {
+    align-items: center;    
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+  }
+}
+
+.code-interface {
+  background-color: #fff;
+  border: none;
+  border-radius: .5rem;
+  overflow: hidden;
+  width: 100%;
+
+  td {
+    padding: .5rem .5rem;
+    vertical-align: middle;
+  }
+
+  .code-indent {
+    padding-left: 2rem;
+  }
+
+  .code-line-number {
+    background-color: #777;
+    color: #fff;
+    text-align: right;
+    width: 3rem;
+  }
+
+  .code-separator {
+    text-align: center;
+    width: .25rem;
+  }
+}

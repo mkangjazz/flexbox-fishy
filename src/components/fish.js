@@ -3,7 +3,7 @@ import React from 'react';
 export default function Fish(props) {
   return (
     <svg
-      className={`fish ${props.className}`}
+      className={`fish ${props.className} floating`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 432.17 358.414"
     >

@@ -3,6 +3,7 @@
   animation-duration: .25s;
   animation-iteration-count: 2;
   animation-name: shake;
+  animation-timing-function: linear;
 }
 
 @keyframes shake {
