@@ -18,5 +18,23 @@ export default {
     {
       className: 'blue',
     },
+    {
+      className: 'orange',
+    },
+    {
+      className: 'green',
+    },
+    {
+      className: 'yellow',
+    },
+    {
+      className: 'pink',
+    },
+    {
+      className: 'red',
+    },
+    {
+      className: 'purple',
+    },
   ],
 };

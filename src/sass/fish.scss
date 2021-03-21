@@ -7,35 +7,35 @@
   transform: scale(.6);
 }
 
-.fish .body {
-  fill: gray;
-}
+// .fish .body {
+//   fill: $white;
+// }
 
 .fish.blue .body {
-  fill: blue;
+  fill: $blue;
 }
 
 .fish.red .body {
-  fill: red;
+  fill: $red;
 }
 
 .fish.green .body {
-  fill: green;
+  fill: $green;
 }
 
 .fish.purple .body {
-  fill: purple;
+  fill: $purple;
 }
 
 .fish.yellow .body {
-  fill: yellow;
+  fill: $yellow;
 }
 
 .fish.pink .body {
-  fill: pink;
+  fill: $pink;
 }
 
 .fish.orange .body {
-  fill: orange;
+  fill: $orange;
 }
 
