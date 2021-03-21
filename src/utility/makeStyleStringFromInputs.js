@@ -9,9 +9,10 @@ export default function makeCSSStringFromInputs(els) {
     let property = chunked[0].value || '';
     let value = chunked[1].value || '';
 
-    if (!property || !value) {
-      continue;
-    }
+    // this is what's causing the issue!
+    // if (!property || !value) {
+    //   continue;
+    // }
 
     const selector = chunked[0].getAttribute('data-selector') || chunked[1].getAttribute('data-selector');
     
@@ -27,10 +28,15 @@ export default function makeCSSStringFromInputs(els) {
     result += value;
     result += ';';
 
-    if (
-      !isNewSelector ||
-      els.length <= chunk
-    ) {
+    const nextEl = els[i + chunk];
+
+    if (nextEl) {
+      const nextSelector = nextEl.getAttribute('data-selector');
+
+      if (selector !== nextSelector) {
+        result += '}';
+      }
+    } else {
       result += '}';
     }
   }
