@@ -7,35 +7,8 @@
   transform: scale(.6);
 }
 
-// .fish .body {
-//   fill: $white;
-// }
-
-.fish.blue .body {
-  fill: $blue;
+@each $key, $value in $colors {
+  .fish.#{$key} .body {
+    fill: color($key);
+  }
 }
-
-.fish.red .body {
-  fill: $red;
-}
-
-.fish.green .body {
-  fill: $green;
-}
-
-.fish.purple .body {
-  fill: $purple;
-}
-
-.fish.yellow .body {
-  fill: $yellow;
-}
-
-.fish.pink .body {
-  fill: $pink;
-}
-
-.fish.orange .body {
-  fill: $orange;
-}
-

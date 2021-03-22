@@ -1,14 +1,26 @@
-$blue: #005ea9;
-$green: #00850b;
-$orange: #ff7f00;
-$pink: #ff2adb;
-$purple: #9e00ff;
-$red: #d20000;
-$yellow: #ecbb1a;
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
 
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+@function color($color) {
+  @return map-get($colors, $color);
+}
+
+$colors: (
+  'blue': #005ea9,
+  'green': #00850b,
+  'orange': #ff7f00,
+  'pink': #ff2adb,
+  'purple': #9e00ff,
+  'red': #d20000,
+  'yellow': #ecbb1a,
+);
 
 $white: #ffffff;
 $charcoal: #333333;
 $gray: #cccccc;
 $black: #000000;
-

@@ -2,146 +2,18 @@
   height: 100%;
   position: relative;
   text-indent: -999em;
-  transform: scale(.75);
+  transform: scale(.85);
   width: 100%;
 }
 
-.scale .scale-quarter {
-  box-sizing: border-box;
-  height: 50%;
-  overflow: hidden;
-  position: absolute;
-  width: 50%;
+@each $key, $value in $colors {
+  .scale.#{$key} .left-scale {
+    fill: tint(color($key), 65);
+  }
 }
 
-.scale .upper-left {
-  left: 0;
-  top: 0;
+@each $key, $value in $colors {
+  .scale.#{$key} .right-scale {
+    fill: tint(color($key), 75);
+  }
 }
-
-.scale .upper-right {
-  right: 0;
-  top: 0;
-}
-
-.scale .lower-right {
-  bottom: 0;
-  right: 0;
-}
-
-.scale .lower-left {
-  bottom: 0;
-  left: 0;
-}
-
-.scale .circle {
-  background-color: #ccc;
-  border-radius: 100%;
-  content: '';
-  height: 200%;
-  position: absolute;
-  top: 0;
-  width: 200%;
-}
-
-.scale .triangle {
-  background-color: #ccc;
-  bottom: 40%;
-  content: '';
-  display: block;
-  height: 200%;
-  position: absolute;
-  transform: rotate(45deg);
-  width: 200%;
-}
-
-.scale .upper-left .circle {
-  left: 0;
-}
-
-.scale .upper-right .circle {
-  right: 0;
-}
-
-.scale .lower-right .triangle {
-  right: 0;
-}
-
-.scale .lower-left .triangle {
-  left: 0;
-}
-
-.scale.blue .upper-left .circle,
-.scale.blue .lower-left .triangle {
-  background-color: blue;
-}
-
-.scale.blue .upper-right .circle,
-.scale.blue .lower-right .triangle {
-  background-color: lightblue;
-}
-
-.scale.red .upper-left .circle,
-.scale.red .lower-left .triangle {
-  background-color: red;
-}
-
-.scale.red .upper-right .circle,
-.scale.red .lower-right .triangle {
-  background-color: red;
-}
-
-.scale.green .upper-left .circle,
-.scale.green .lower-left .triangle {
-  background-color: green;
-}
-
-.scale.green .upper-right .circle,
-.scale.green .lower-right .triangle {
-  background-color: green;
-}
-
-.scale.purple .upper-left .circle,
-.scale.purple .lower-left .triangle {
-  background-color: purple;
-}
-.scale.purple .upper-right .circle,
-.scale.purple .lower-right .triangle {
-  background-color: purple;
-}
-
-.scale.yellow .upper-left .circle,
-.scale.yellow .lower-left .triangle {
-  background-color: yellow;
-}
-.scale.yellow .upper-right .circle,
-.scale.yellow .lower-right .triangle {
-  background-color: yellow;
-}
-
-.scale.pink .upper-left .circle,
-.scale.pink .lower-left .triangle {
-  background-color: pink;
-}
-.scale.pink .upper-right .circle,
-.scale.pink .lower-right .triangle {
-  background-color: pink;
-}
-
-.scale.orange .upper-left .circle,
-.scale.orange .lower-left .triangle {
-  background-color: orange;
-}
-.scale.orange .upper-right .circle,
-.scale.orange .lower-right .triangle {
-  background-color: orange;
-}
-
-
-
-
-
-
-
-
-

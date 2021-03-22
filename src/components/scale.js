@@ -2,23 +2,25 @@ import React from 'react';
 
 export default function Scale(props) {
   return (
-    <div className={`scale ${props.className}`}>
-      <div className="scale-quarter upper-left">
-        <div className="circle">
-        </div>
-      </div>
-      <div className="scale-quarter upper-right">
-        <div className="circle">
-        </div>
-      </div>
-      <div className="scale-quarter lower-right">
-        <div className="triangle">
-        </div>
-      </div>
-      <div className="scale-quarter lower-left">
-        <div className="triangle">
-        </div>
-      </div>
-    </div>
+    <svg 
+      className={`scale ${props.className}`}
+      xmlns="http://www.w3.org/2000/svg"
+      width="602.787"
+      height="585.232"
+      viewBox="0 0 602.787 585.232"
+    >
+      <g id="Group_23" data-name="Group 23" transform="translate(-3222.599 -5457)">
+        <path 
+          className='left-scale'
+          d="M300.779,585.23,0,339.419a382.37,382.37,0,0,1,6.127-68.312A368.626,368.626,0,0,1,23.7,207.472a354.429,354.429,0,0,1,27.811-57.6,336.706,336.706,0,0,1,36.837-50.2A315.469,315.469,0,0,1,133,58.224,293.973,293.973,0,0,1,184.255,26.89,277.577,277.577,0,0,1,240.9,7.029,272.662,272.662,0,0,1,301.728,0V584.455l-.947.774Z" 
+          transform="translate(3222.599 5457.002)" 
+        />
+        <path 
+          className='right-scale'
+          d="M301.728,585.232v0A272.667,272.667,0,0,1,240.9,578.2a277.583,277.583,0,0,1-56.646-19.861A293.961,293.961,0,0,1,133,527.007,315.471,315.471,0,0,1,88.35,485.559a336.706,336.706,0,0,1-36.837-50.2,354.429,354.429,0,0,1-27.811-57.6A368.631,368.631,0,0,1,6.127,314.123,382.371,382.371,0,0,1,0,245.811L300.779,0l.949.775V585.232Z" 
+          transform="translate(3825.386 6042.232) rotate(180)" 
+        />
+      </g>
+    </svg>
   );
 }

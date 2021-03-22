@@ -28,7 +28,7 @@ form {
 }
 
 .code-interface {
-  background-color: #fff;
+  background-color: $white;
   border: none;
   border-radius: .5rem;
   overflow: hidden;
@@ -45,7 +45,7 @@ form {
 
   .code-line-number {
     background-color: #777;
-    color: #fff;
+    color: $white;
     text-align: right;
     width: 3rem;
   }

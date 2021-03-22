@@ -8,4 +8,12 @@
   display: block;
   height: auto;
   width: 100%;
+
+  .left-scale {
+    fill: color('blue');
+  }
+
+  .right-scale {
+    fill: tint(color('blue'), 40%);
+  }
 }
