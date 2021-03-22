@@ -203,7 +203,7 @@ export default function Main() {
                     </div>
                   </form>
                   <p className='copyright text-center'>
-                    Flexbox Fishy is a clone of <a href='https://flexboxfroggy.com/' target="_blank">Flexbox Froggy</a>
+                    Flexbox Fishy is a clone of <a href='https://flexboxfroggy.com/' rel="noopener noreferrer" target="_blank">Flexbox Froggy</a>
                   </p>
                   <p className='copyright'>
                     <small>
