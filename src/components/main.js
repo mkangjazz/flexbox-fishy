@@ -207,7 +207,7 @@ export default function Main() {
                   </p>
                   <p className='copyright'>
                     <small>
-                      &copy;{new Date().getFullYear()} Mike Kang, created for educational purposes only.
+                      &copy;{new Date().getFullYear()} Mike Kang, educational purposes only.
                     </small>
                   </p>
                 </section>

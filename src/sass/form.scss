@@ -1,5 +1,4 @@
 form {
-  margin-bottom: 10rem;
   padding: 1rem 0;
 
   [type="text"] {
@@ -53,5 +52,11 @@ form {
   .code-separator {
     text-align: center;
     width: .25rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  form {
+    margin-bottom: 10rem;
   }
 }

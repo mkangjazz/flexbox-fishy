@@ -10,24 +10,28 @@
 @import './gameboard';
 @import './levelselector';
 @import './logo';
+@import './mainbar';
 @import './scale';
+@import './scrollbars';
 @import './shake-me';
 @import './sidebar';
 @import './screenreaders';
 @import './typography';
 
 .container {
-  align-items: stretch;
-  display: flex;
   min-height: calc(100vh);
   margin: 0 auto;
 }
 
-.mainbar {
-  width: calc(100% - 20em);
+.level {
+  align-items: center;
+  display: flex;
+  padding: 1.6rem 0;
 }
 
-.level {
-  display: flex;
-  padding: 1rem 0;
+@media screen and (min-width: 800px) {
+  .container {
+    align-items: stretch;
+    display: flex;
+  }
 }

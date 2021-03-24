@@ -1,7 +1,13 @@
 .gameboard {
   height: 100%;
-  position: relative;
+  min-width: 300px;
+  min-height: 300px;
+  position: absolute;
   width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 
   ul {
     bottom: 0;
@@ -34,3 +40,12 @@
   }
 }
 
+@media screen and (min-width: 800px) {
+  .gameboard {
+    // width: 50vw;
+    // height: 50vw;
+
+    // max-width: 100vh;
+    // max-height: 100vh;
+  }  
+}
