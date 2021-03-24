@@ -218,11 +218,11 @@ export default function Main() {
                 <ul 
                   className='fishies'
                 >
-                  {currentLevelData.gamePieces.map((obj, index) => {
+                  {currentLevelData.gamePieces.map((str, index) => {
                     return (
                       <li key={index}>
                         <div className='gamepiece'>
-                          <Fish className={obj.className} />
+                          <Fish className={str} />
                         </div>
                       </li>
                     )
@@ -231,11 +231,11 @@ export default function Main() {
                 <ul 
                   className='scales'
                 >
-                  {currentLevelData.gamePieces.map((obj, index) => {
+                  {currentLevelData.gamePieces.map((str, index) => {
                     return (
                       <li key={index}>
                         <div className='gamepiece'>
-                          <Scale className={obj.className} />
+                          <Scale className={str} />
                         </div>
                       </li>
                     )

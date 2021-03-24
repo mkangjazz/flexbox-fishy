@@ -9,14 +9,19 @@ export default {
     },
   ],
   description: ` 
-    <p>Description ipsum...</p>
+    <p>
+      The 'justify-content' property distributes space between and around flex items, and may be set to the following values:
+    </p>
+    <ul>
+      <li>flex-start</li>
+      <li>flex-end</li>
+      <li>center</li>
+      <li>space-between</li>
+      <li>space-around</li>
+    </ul>
   `,
   gamePieces: [
-    {
-      className: 'blue',
-    },
-    {
-      className: 'red',
-    },
+    'orange',
+    'purple',
   ],
 };

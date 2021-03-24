@@ -10,10 +10,10 @@
   width: 100%;
 
   .left-scale {
-    fill: color('blue');
+    fill: color('orange');
   }
 
   .right-scale {
-    fill: tint(color('blue'), 40%);
+    fill: tint(color('orange'), 40%);
   }
 }

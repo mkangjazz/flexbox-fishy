@@ -1,6 +1,16 @@
 .bg-water {
   animation: water 15s ease infinite;
-  background: linear-gradient(-45deg, #91E6FF, #23A6D5, #0096F4, #41FFD2);
+  background: linear-gradient(
+    -45deg,
+    darken($watercolor, 5),
+    darken($watercolor, 0),
+    lighten($watercolor, 10),
+    lighten($watercolor, 20),
+  );
+  // #91E6FF,
+  // #23A6D5, 
+  // #01758a,
+  //  #41FFD2
   background-size: 400% 400%;  
 }
 

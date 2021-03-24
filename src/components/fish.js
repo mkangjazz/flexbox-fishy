@@ -1,9 +1,13 @@
+import getRandomInteger from '../utility/getRandomInteger';
+
 import React from 'react';
 
 export default function Fish(props) {
+  const int = getRandomInteger(1, 3);
+    
   return (
     <svg
-      className={`fish ${props.className} floating`}
+      className={`fish ${props.className} floating floating-${int}`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 432.17 358.414"
     >

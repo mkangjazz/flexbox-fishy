@@ -1,17 +1,8 @@
 .sidebar {
-  background-color: rgba(255, 255, 255, .45);
-  height: calc(100vh);
-  overflow: hidden;
+  background-color: rgba(255, 255, 255, .25);
   width: 40%;
 
-  .scrollable {
-    height: 100%;
-    margin-right: -50px; /* Maximum width of scrollbar */
-    overflow-y: auto;  
-    padding-right: 50px; /* Maximum width of scrollbar */
-
-    section {
-      padding: 3rem;
-    }
+  section {
+    padding: 3rem;
   }
 }

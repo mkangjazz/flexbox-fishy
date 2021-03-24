@@ -40,12 +40,13 @@ input[type=submit] {
 
   span {
     align-items: center;
+    color: $white;
     display: flex;
     justify-content: center;
 
     &:after {
-      border-top: 2px solid color('charcoal');
-      border-left: 2px solid color('charcoal');
+      border-top: 2px solid $white;
+      border-left: 2px solid $white;
       content: '';
       height: .5rem;
       margin-left: .5rem;

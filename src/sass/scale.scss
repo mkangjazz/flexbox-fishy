@@ -8,7 +8,7 @@
 
 @each $key, $value in $colors {
   .scale.#{$key} .left-scale {
-    fill: tint(color($key), 65);
+    fill: tint(color($key), 50);
   }
 }
 
