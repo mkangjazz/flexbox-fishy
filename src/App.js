@@ -1,7 +1,7 @@
 import './sass/App.scss';
 
 import React from 'react';
-import {BrowserRouter as Router, Redirect, Switch, Route} from "react-router-dom";
+import {HashRouter as Router, Redirect, Switch, Route} from "react-router-dom";
 
 import Main from './components/main';
 
