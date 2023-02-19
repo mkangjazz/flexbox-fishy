@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/flexbox-fishy/static/css/main.35f80d9c.chunk.css",
-    "main.js": "/flexbox-fishy/static/js/main.be71f852.chunk.js",
-    "main.js.map": "/flexbox-fishy/static/js/main.be71f852.chunk.js.map",
+    "main.js": "/flexbox-fishy/static/js/main.a27ab7c4.chunk.js",
+    "main.js.map": "/flexbox-fishy/static/js/main.a27ab7c4.chunk.js.map",
     "runtime-main.js": "/flexbox-fishy/static/js/runtime-main.9fb39ba8.js",
     "runtime-main.js.map": "/flexbox-fishy/static/js/runtime-main.9fb39ba8.js.map",
-    "static/js/2.6f6bf316.chunk.js": "/flexbox-fishy/static/js/2.6f6bf316.chunk.js",
-    "static/js/2.6f6bf316.chunk.js.map": "/flexbox-fishy/static/js/2.6f6bf316.chunk.js.map",
+    "static/js/2.f84fcb84.chunk.js": "/flexbox-fishy/static/js/2.f84fcb84.chunk.js",
+    "static/js/2.f84fcb84.chunk.js.map": "/flexbox-fishy/static/js/2.f84fcb84.chunk.js.map",
     "index.html": "/flexbox-fishy/index.html",
-    "precache-manifest.2598c5edb3bab3b8e79be01ef4de6f35.js": "/flexbox-fishy/precache-manifest.2598c5edb3bab3b8e79be01ef4de6f35.js",
+    "precache-manifest.7ab529db1b5892a8b9168be1885d2496.js": "/flexbox-fishy/precache-manifest.7ab529db1b5892a8b9168be1885d2496.js",
     "service-worker.js": "/flexbox-fishy/service-worker.js",
     "static/css/main.35f80d9c.chunk.css.map": "/flexbox-fishy/static/css/main.35f80d9c.chunk.css.map",
-    "static/js/2.6f6bf316.chunk.js.LICENSE.txt": "/flexbox-fishy/static/js/2.6f6bf316.chunk.js.LICENSE.txt"
+    "static/js/2.f84fcb84.chunk.js.LICENSE.txt": "/flexbox-fishy/static/js/2.f84fcb84.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9fb39ba8.js",
-    "static/js/2.6f6bf316.chunk.js",
+    "static/js/2.f84fcb84.chunk.js",
     "static/css/main.35f80d9c.chunk.css",
-    "static/js/main.be71f852.chunk.js"
+    "static/js/main.a27ab7c4.chunk.js"
   ]
 }
